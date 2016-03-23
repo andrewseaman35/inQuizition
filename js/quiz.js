@@ -15,6 +15,7 @@ $(document).ready(function() {
     initUI()
 });
 
+// Constants
 var Q_PER_QUIZ = 10;
 var NUM_TIMER_BARS = 7;
 var TIME_ELASPED_COUNT = 0.15;
@@ -47,6 +48,13 @@ var timerInterval;
 var timeExpired;
 
 function setQuestionsCategory() {
+    /*
+     * Sets the question category for the particular day. First tries to
+     * access the cookie with the category, if none found, chooses a
+     * random category, sets it as the day's question, and sets the cookie.
+     */
+
+    // Try to get the category cookie
     res = getCategoryCookie();
 
     if (res == null) {
@@ -68,6 +76,7 @@ function setQuestionsCategory() {
         // Set the cookie
         document.cookie = new_cookie;
     } else {
+        // If we found the cookie, use it
         category = res;
     }
     
@@ -76,7 +85,8 @@ function setQuestionsCategory() {
 
 function getCategoryCookie() {
     /*
-     * Returns the cookie defined as "category"
+     * Returns the cookie defined as "category". If none found, returns
+     * null.
      */
     var name = "category=";
 
@@ -357,7 +367,9 @@ function hover(element) {
 }
 
 function ondown(element) {
-    // Set up the button click UI responses.
+    /*
+     * Set up the button click UI responses.
+     */
     switch (element.id) {
         case "stop_button":
             source = 'assets/quitWhite.png';
@@ -542,12 +554,14 @@ function selectRow(index) {
     next = document.getElementById("next_button");
     next.src = "assets/checkMark.png";
 
+    // Deselect all the bubbles
     for (var i = 0; i < 4; i++) {
         item = document.getElementById("choice_item_" + i);
         item.children[0].src = "assets/bubble.png";
         item.children[1].style.color = "#2d2d2c";
     }
     
+    // Select the selected bubble
     if (index >= 0 && index < 4) {
         item = document.getElementById("choice_item_" + index);
         item.children[0].src = "assets/correctBubble.png";
@@ -558,7 +572,8 @@ function selectRow(index) {
 
 function startQuiz(category) {
     /* 
-     * Initializes the UI for the quiz and starts it up.
+     * Initializes the UI for the quiz and starts the quiz. Removes
+     * popup, displays first question.
      */
 
     // Set up the counters for correct and incorrect choices, defaults them
@@ -567,6 +582,7 @@ function startQuiz(category) {
     numCorrect = 0;
     numIncorrect = 0;
 
+    // Increment scores
     $("#correct_score").html("" + numCorrect);
     $("#incorrect_score").html("" + numIncorrect);
     
@@ -603,7 +619,8 @@ function toggleAnswerUI(q_type) {
 
 function showQuestion(question) {
     /* 
-     * Displays a question on the UI.
+     * Displays a question on the UI. Deselects all options and resets
+     * the timer.
      */
 
     // Set the question text
@@ -613,6 +630,7 @@ function showQuestion(question) {
     // other one
     toggleAnswerUI(question['q_type']);
 
+    // Deselect all the rows
     selectRow(-1);
 
     if (question['q_type'] == TYPE_CHOICE) {
@@ -633,6 +651,7 @@ function showQuestion(question) {
         // Make sure that the next button is enabled
         $("#next_button").removeAttr("disabled");
     }
+
     resetTimer();
     startTimer();
 }
@@ -646,6 +665,7 @@ function questionAnswered(correct) {
         // If correct, increment correct counter
         numCorrect += current['q_score'];
         $("#correct_score").html("" + numCorrect);
+    
     } else {
         // Otherwise, increment incorrect counter
         numIncorrect += current['q_score'];
@@ -752,6 +772,7 @@ function toggleStartPopup(visible) {
      */
     if (!visible) {
         $("#start_popup").css("display", "none")
+
     } else {
         $("#start_popup").css("display", "block")
     }

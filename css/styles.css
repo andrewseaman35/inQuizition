@@ -3,6 +3,7 @@
  *    Stylesheet for inQuizition web application
  *    Author: Andrew Seaman
  */
+
 *{
     font-family: 'Yanone Kaffeesatz', sans-serif;
 }
@@ -153,9 +154,6 @@
     left: 40px;
     width: 80px;
     height: 50px;
-}
-
-#start_menu {
 }
 
 #category_label {
