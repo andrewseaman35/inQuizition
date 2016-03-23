@@ -1,0 +1,71 @@
+*******************************
+*******************************
+***        ASSIGNMENT 2     ***
+***                         ***
+***          README         ***
+***  Author: Andrew Seaman  ***
+***   Student ID: 1522507   ***
+*******************************
+*******************************
+
+*** INTRODUCTION ***
+inQuizition is a quiz web application written in HTML, CSS, and 
+Javascript. 
+
+*** STARTING A QUIZ ***
+There are several different categories currently implemented 
+with this application. Each category corresponds to a different 
+question theme. A different theme will be randomly selected
+each day, and each quiz consists of ten questions, randomly 
+selected, from the question pool corresponding to the day's 
+quiz theme.
+
+Start the quiz by pressing the "Start" button. Upon start, 
+one of two question types will be presented: multiple choice
+or input. 
+
+*** QUESTION TYPES ***
+A multiple choice question will list four possible
+answers for the question. The user must first select an 
+answer and then press the checkmark button in the bottom right
+to submit the answer. The checkmark button will not be active
+until the user selects an option.
+
+An input question will have an empty text field for the user
+to fill in with their response. Once filled in, the user must
+press the checkmark button at the bottom right to submit their
+answer. The answer will be checked, by character, against the 
+expected input. 
+
+*** PAUSING AND QUITTING ***
+To quit or pause the quiz, press the 'x' button at the bottom 
+left corner of the screen. A popup will appear, confirming
+whether you would like to quit. If pausing, press "No" in 
+order to return to the quiz. If qutting, press "Yes" in order
+to return to the start popup.
+
+*** SCORES ***
+The scores will be shown in the top left and right of the screen.
+The accumulated score from correct answers will be shown at
+the top left, while the accumulated incorrect score will be 
+shown at the top right. At the end of the quiz, the score of
+the correctly answered questions will be displayed.
+
+*** TIMER ***
+Each question has a limited amount of time allowed for answering.
+The time is displayed to the user by the series of seven bars
+between the two score fields. The bars will all start out with
+solid opacity at the beginning of a question. Over time, the bars
+will begin to fade out from the rightmost to the leftmost. When
+the leftmost bar becomes completely opaque, the time for the 
+question has expired. Upon time expiry, if an answer is selected
+or has been inputted, it will be submitted and treated as a normal
+input. Otherwise, the question will be counted as answered
+incorrectly.
+
+*** FINISHING THE QUIZ ***
+There are a total of ten questions per quiz. At the end of the
+tenth question, the quiz will stop and there will be a popup
+displaying the total correct score accumulated during the quiz.
+There will also be a button allowing the user to return to the
+start menu.

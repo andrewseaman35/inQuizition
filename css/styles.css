@@ -1,0 +1,356 @@
+/*
+ * styles.css
+ *    Stylesheet for inQuizition web application
+ *    Author: Andrew Seaman
+ */
+*{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+#content {
+    width: 400px;
+    padding: 0px;
+    margin: 0px;
+    height: 610px;
+    background-color: #364b54;
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+}
+
+#title_div {
+    width: 400px;
+    height: 42px;
+    text-align: center;
+    top: 12px;
+    padding-top: 0px;
+    margin: 0px;
+    border: none;
+}
+
+#timer_table {
+    border-spacing: 8px;
+    border-collapse: separate;
+    margin-top: 10px;
+    margin-left: 14px;
+    width: 90%;
+    height: 65px;
+}
+
+#timer_row {
+    height: 70%;
+}
+
+.timer_cell {
+    background-color: #f9b233;
+    border-radius: 5px;
+}
+
+#ans_label {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 30px;
+    color: #2d2d2c;
+    font-weight: bold;
+}
+
+#ans_input {
+    font-size: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 70px;
+    width: 300px;
+    padding: 5px;
+    border-color: #f9b233;
+    border-radius: 5px;
+    border-width: 3px;
+    border-style: solid;
+}
+
+#choice_list {
+    list-style-type: none;
+}
+
+#start_popup {
+    position: absolute;
+    height: 604px;
+    width: 396px;
+    left: 0px;
+    margin-left: 9px;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 4;
+}
+
+#start_menu_logo {
+    position: absolute;
+    height: 48px;
+    width: auto;
+    left: 60px;
+    top: 155px;
+    z-index: 6;
+}
+
+#confirm_menu {
+    display: none;
+}
+
+#finished_menu {
+    display: none;
+}
+
+#your_score {
+    font-size: 24px;
+    width: 100%;
+    text-align: center;
+    margin-top: 125px;
+    color: #2d2d2c;
+}
+
+#final_score {
+    position: absolute;
+    top: 135px;
+    width: 100%;
+    font-size: 78px;
+    text-align: center;
+    color: #ffffff;
+}
+
+#final_button {
+    position: absolute;
+    top: 230px;
+    left: 110px;
+    width: 80px;
+    height: 50px;
+}
+
+#final_text {
+    color: #f9b233;
+    top: 80px;
+}
+
+.popup_text {
+    position: absolute;
+    font-size: 38px;
+    top: 150px;
+    width: 100%;
+    text-align: center;
+    color: #2d2d2c;
+}
+
+#confirm_button {
+    position: absolute;
+    top: 230px;
+    left: 180px;
+    width: 80px;
+    height: 50px;
+}
+
+#reject_button {
+    position: absolute;
+    top: 230px;
+    left: 40px;
+    width: 80px;
+    height: 50px;
+}
+
+#start_menu {
+}
+
+#category_label {
+    position: absolute;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 24px;
+    text-align: center;
+    width: 100%;
+    color: #2d2d2c;
+    top: 120px;
+}
+
+#category {
+    position: absolute;
+    width: 100%;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    color: #ffffff;
+    font-size: 36px;
+    text-align: center;
+    top: 150px;
+}
+
+#top_section {
+    position: absolute;
+    height: 80px;
+    top: 82px;
+    border-color: #364b54;
+}
+
+#timer {
+    float: left;
+    height: 80px;
+    width: 210px;
+    text-align: center;
+}
+
+#scorebox_correct {
+    float: left;
+}
+
+#correct_score {
+    color: #f9b233;
+}
+
+#incorrect_score {
+    left: 293px;
+    color: #2d2d2c;
+}
+
+#scorebox_incorrect {
+    float: right;
+}
+
+#start_button {
+    position: absolute;
+    top: 220px;
+    left: 35px;
+}
+
+#stop_button {
+    left: 20px;
+}
+
+#next_button {
+    right: 20px;
+}
+
+#mid_section {
+    top: 174px;
+    height: 96px;
+    width: 314px;
+    background-color: #77858c;
+    border-color: #2d2d2c;
+    padding: 28px;
+}
+
+#question_box {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 28px;
+    color: #ffffff;
+    padding: 10px;
+}
+
+#ctrl_section {
+    top: 530px;
+    height: 60px;
+}
+
+#footer {
+    position: absolute;
+    height: auto;
+    top: 602px;
+    width: 400px;
+    text-align: center;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 12px;
+}
+.section {
+    position: absolute;
+    width: 370px;
+    margin-left: 12px;
+    border-radius: 5px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #364b54;
+}
+
+.scorebox {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 32px;
+    text-align: center;
+    height: 60px;
+    width: 80px;
+    border-radius: 5px;
+}
+
+.ans_section {
+    top: 338px;
+    height: 180px;
+    text-align: center;
+}
+
+.score_circle {
+    position: absolute;
+    margin: 0px;
+    z-index: 5;
+}
+
+.score_text {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 64px;
+    position: absolute;
+    margin: auto;
+    top: 0px;
+    width: 83px;
+    height: 83px;
+    left: 0px;
+    text-align: center;
+}
+
+.ctrl_button {
+    position: absolute;
+    bottom: 0px;
+}
+
+.choice_bubble {
+    position: absolute;
+    left: 80px;
+}
+
+.choice_item {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.choice_text {
+    text-align: left;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 26px;
+    text-align: left;
+    font-weight: bold;
+    color: #2d2d2c;
+}
+
+.popup_menu {
+    position: absolute;
+    top: 150px;
+    height: 300px;
+    width: 300px;
+    left: 30px;
+    border-width: 3px;
+    border-radius: 5px;
+    border-color: #f9b233;
+    background-color: #364b54;
+
+}
+
+.yes_or_no {
+    border-style: solid;
+    border-width: 2px;
+    border-color: #ffffff;
+    border-radius: 5px;
+    background-color: #364b54;
+    font-size: 36px;
+    color: #f9b233;
+}
+
+.popup {
+    position: absolute;
+    height: 604px;
+    width: 396px;
+    left: 0px;
+    margin-left: 9px;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 4;
+}
+
+

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!-- index.html                                    -->
+<!-- Contains HTML for inQuizition web application -->
+<!-- Author: Andrew Seaman                         -->
+
+<html>
+
+<head>
+    <title>inQuizition</title>
+    <link rel="shortcut icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="js/jquery-2.1.4.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script type="text/javascript" src="js/questions.js"></script>
+    <script type="text/javascript" src="js/quiz.js"></script>
+</head>
+<body>
+    <div id="content">
+        <div id="title_div" class="section">
+            <img src="assets/logoSmall.png" alt="inQuizition Logo">
+        </div>
+        <div id="start_popup" class="popup section">
+            <div id="start_menu_logo">
+                <img src="assets/logo.png" alt="inQuizition Logo">
+            </div>
+            <div id="finished_menu" class="popup_menu section">
+                <div id="final_text" class="popup_text">QUIZ FINISHED!</div>
+                <div id="your_score">YOUR SCORE</div>
+                <div id="final_score"></div>
+                <button id="final_button" class="yes_or_no">DONE</button>
+            </div>
+            <div id="confirm_menu" class="popup_menu section">
+                <div id="confirm_text" class="popup_text">ARE YOU SURE?</div>
+                <button id="confirm_button" class="yes_or_no">YES</button>
+                <button id="reject_button" class="yes_or_no">NO</button>
+            </div>
+            <div id="start_menu" class="popup_menu section">
+                <div id="category_label">TODAY'S CATEGORY IS:</div>
+                <div id="category">FOODIE HEAVEN</div>
+                <img src="assets/start.png" id="start_button" alt="start">
+            </div>
+        </div>
+        <div id="top_section" class="section">
+            <div id="scorebox_correct" class="scorebox">
+                <img src="assets/rightBubble.png" alt="Correct Bubble">
+                <span id="correct_score" class="score_text">19</span>
+            </div>
+            <div id="timer">
+                <table id="timer_table">
+                    <tr id="timer_row"></tr>
+                </table>
+            </div>
+            <div id="scorebox_incorrect" class="scorebox">
+                <img src="assets/wrongBubble.png" alt="Incorrect Bubble">
+                <span id="incorrect_score" class="score_text">19</span>
+            </div>
+        </div>
+        <div id="mid_section" class="section">
+            <div id="question_box"></div>
+        </div>
+        <div id="input_box" class="ans_section section">
+            <div id="answers_box">
+                <div id="ans_label">YOUR ANSWER IS:</div>
+                <input type="text" id="ans_input">
+            </div>
+        </div>
+        <div id="choice_box" class="ans_section section">
+            <ul id="choice_list">
+            </ul>
+        </div>
+        <div id="ctrl_section" class="section">
+            <img src="assets/xButton.png" id="stop_button" class="ctrl_button" alt="quit">
+            <img src="assets/checkMark.png" id="next_button" class="ctrl_button" alt="next">
+        </div>
+        <div id="footer">Copyright © 2016 Andrew Seaman</div>
+    </div>
+</body>
+
+</html>
